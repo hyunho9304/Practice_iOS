@@ -36,6 +36,9 @@ class HiddenAlertViewController: UIViewController {
         
     }
     
+    
+    
+    
     @objc func pressedAlertBackBtn( _ sender : UIButton ) {
         
         alertView.isHidden = true
