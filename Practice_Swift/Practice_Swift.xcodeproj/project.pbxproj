@@ -14,7 +14,6 @@
 		BEC84A0320F0BA350000399C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC84A0120F0BA350000399C /* LaunchScreen.storyboard */; };
 		BEC84A1220F0BB290000399C /* HiddenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC84A1120F0BB290000399C /* HiddenAlertViewController.swift */; };
 		BEC84A1420F2123C0000399C /* HiddenAlert2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC84A1320F2123C0000399C /* HiddenAlert2ViewController.swift */; };
-		BEC84A1620F21D3F0000399C /* HiddenAlert3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC84A1520F21D3F0000399C /* HiddenAlert3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		BEC84A0420F0BA350000399C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC84A1120F0BB290000399C /* HiddenAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenAlertViewController.swift; sourceTree = "<group>"; };
 		BEC84A1320F2123C0000399C /* HiddenAlert2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenAlert2ViewController.swift; sourceTree = "<group>"; };
-		BEC84A1520F21D3F0000399C /* HiddenAlert3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenAlert3ViewController.swift; sourceTree = "<group>"; };
 		C1D027067F20541AC3CF6023 /* Pods-Practice_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Practice_Swift/Pods-Practice_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		E6EEE10FD92FF18DE3E8D7EC /* Pods-Practice_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Practice_Swift/Pods-Practice_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +134,6 @@
 			children = (
 				BEC84A1120F0BB290000399C /* HiddenAlertViewController.swift */,
 				BEC84A1320F2123C0000399C /* HiddenAlert2ViewController.swift */,
-				BEC84A1520F21D3F0000399C /* HiddenAlert3ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -270,7 +267,6 @@
 			files = (
 				BEC84A1420F2123C0000399C /* HiddenAlert2ViewController.swift in Sources */,
 				BEC84A1220F0BB290000399C /* HiddenAlertViewController.swift in Sources */,
-				BEC84A1620F21D3F0000399C /* HiddenAlert3ViewController.swift in Sources */,
 				BEC849F920F0BA340000399C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
