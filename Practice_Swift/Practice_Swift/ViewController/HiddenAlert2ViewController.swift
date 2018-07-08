@@ -36,9 +36,6 @@ class HiddenAlert2ViewController: UIViewController {
         
         if alertUp == false {
 
-            print( alertView.frame.origin.y )
-            print( alertView.frame.size.height )
-
             alertView.frame.origin.y -= alertView.frame.size.height
             alertView.layoutIfNeeded()
             alertUp = true
@@ -49,10 +46,7 @@ class HiddenAlert2ViewController: UIViewController {
     @objc func pressedAlertBackBtn( _ sender : UIButton ) {
         
         if alertUp == true {
-            
-            print( alertView.frame.origin.y )
-            print( alertView.frame.size.height )
-            
+
             alertView.frame.origin.y += alertView.frame.size.height
             alertView.layoutIfNeeded()
             alertUp = false
