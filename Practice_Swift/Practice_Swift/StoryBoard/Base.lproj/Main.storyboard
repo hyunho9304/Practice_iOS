@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="1651" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--나의 위치 가져오기-->
         <scene sceneID="y0H-H2-xuY">
             <objects>
-                <viewController id="jv4-4Z-ui4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyLocationViewController" id="jv4-4Z-ui4" userLabel="나의 위치 가져오기" customClass="MyLocationViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x1Q-D8-rOZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
