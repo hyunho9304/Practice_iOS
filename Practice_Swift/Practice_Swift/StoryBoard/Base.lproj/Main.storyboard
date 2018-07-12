@@ -152,6 +152,21 @@
             </objects>
             <point key="canvasLocation" x="1651" y="138"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="y0H-H2-xuY">
+            <objects>
+                <viewController id="jv4-4Z-ui4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x1Q-D8-rOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="g4m-EO-6ti"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53C-Og-U4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2464" y="141"/>
+        </scene>
     </scenes>
     <resources>
         <image name="uploadImage" width="800" height="676"/>
