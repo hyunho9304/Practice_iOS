@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="2463.1999999999998" y="140.77961019490255"/>
         </scene>
-        <!--View Controller-->
+        <!--Naver Map View Controller-->
         <scene sceneID="uxb-eC-GS7">
             <objects>
-                <viewController id="FZT-bH-OaT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NaverMapViewController" id="FZT-bH-OaT" customClass="NaverMapViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bn3-ph-bRO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -12,6 +12,7 @@
 		BE0821CF20FDEDB800AA3FC9 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0821CE20FDEDB700AA3FC9 /* ApiGatewayMac.framework */; };
 		BE0821D020FDEDB800AA3FC9 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE0821CE20FDEDB700AA3FC9 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE0821D320FDEDC000AA3FC9 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0821D220FDEDC000AA3FC9 /* NMapViewerSDK.framework */; };
+		BE0821D720FDEFC900AA3FC9 /* NaverMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0821D620FDEFC900AA3FC9 /* NaverMapViewController.swift */; };
 		BEC849F920F0BA340000399C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC849F820F0BA340000399C /* AppDelegate.swift */; };
 		BEC849FE20F0BA340000399C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC849FC20F0BA340000399C /* Main.storyboard */; };
 		BEC84A0020F0BA350000399C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC849FF20F0BA350000399C /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		BE0821CE20FDEDB700AA3FC9 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApiGatewayMac.framework; path = Frameworks/ApiGatewayMac.framework; sourceTree = "<group>"; };
 		BE0821D220FDEDC000AA3FC9 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = Frameworks/NMapViewerSDK.framework; sourceTree = "<group>"; };
 		BE0821D520FDEE7D00AA3FC9 /* NaverMap_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaverMap_Bridging_Header.h; sourceTree = "<group>"; };
+		BE0821D620FDEFC900AA3FC9 /* NaverMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapViewController.swift; sourceTree = "<group>"; };
 		BEC849F520F0BA340000399C /* Practice_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC849F820F0BA340000399C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC849FD20F0BA340000399C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				BEC84A1120F0BB290000399C /* HiddenAlertViewController.swift */,
 				BEC84A1320F2123C0000399C /* HiddenAlert2ViewController.swift */,
 				BE08218F20F7987B00AA3FC9 /* MyLocationViewController.swift */,
+				BE0821D620FDEFC900AA3FC9 /* NaverMapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0821D720FDEFC900AA3FC9 /* NaverMapViewController.swift in Sources */,
 				BEC84A1420F2123C0000399C /* HiddenAlert2ViewController.swift in Sources */,
 				BEC84A1220F0BB290000399C /* HiddenAlertViewController.swift in Sources */,
 				BEC849F920F0BA340000399C /* AppDelegate.swift in Sources */,
