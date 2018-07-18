@@ -253,40 +253,45 @@
                     <view key="view" contentMode="scaleToFill" id="bUX-6j-QYB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBX-xq-MB4">
-                                <rect key="frame" x="97" y="91" width="101" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wG-JQ-ZT6">
-                                <rect key="frame" x="67" y="132" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9lG-dy-C3L">
-                                <rect key="frame" x="0.0" y="303" width="375" height="364"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4e4-JL-Uvu"/>
                     </view>
                     <connections>
-                        <outlet property="calloutLabel" destination="rBX-xq-MB4" id="nkK-QV-4yv"/>
-                        <outlet property="calloutView" destination="6wG-JQ-ZT6" id="TqO-CP-Pve"/>
-                        <outlet property="naverMapView" destination="9lG-dy-C3L" id="1Kv-Ev-wVP"/>
+                        <outlet property="calloutLabel" destination="XhL-tW-xxY" id="Uf8-zf-7lP"/>
+                        <outlet property="calloutView" destination="Kqr-kp-ExM" id="5yE-Am-N5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihp-pE-7Mg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Kqr-kp-ExM">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v4_tooltip_distance1" translatesAutoresizingMaskIntoConstraints="NO" id="xZL-ek-PH4">
+                            <rect key="frame" x="0.0" y="0.0" width="250" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v4_tooltip_distance2" translatesAutoresizingMaskIntoConstraints="NO" id="1kE-I3-Z8y">
+                            <rect key="frame" x="121" y="27" width="8" height="6"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhL-tW-xxY">
+                            <rect key="frame" x="16" y="4" width="218" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <viewLayoutGuide key="safeArea" id="nAb-H5-qZ2"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="5069.6000000000004" y="121.88905547226388"/>
         </scene>
     </scenes>
     <resources>
         <image name="uploadImage" width="800" height="676"/>
+        <image name="v4_tooltip_distance1" width="19" height="28"/>
+        <image name="v4_tooltip_distance2" width="7" height="6"/>
     </resources>
 </document>

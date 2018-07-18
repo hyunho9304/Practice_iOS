@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NaverLocationViewController: UIViewController , NMapViewDelegate, NMapPOIdataOverlayDelegate, NMapLocationManagerDelegate  {
+class NaverLocationViewController: UIViewController , NMapViewDelegate, NMapPOIdataOverlayDelegate, NMapLocationManagerDelegate {
 
     var mapView: NMapView?
     var changeStateButton: UIButton?
@@ -84,6 +84,7 @@ class NaverLocationViewController: UIViewController , NMapViewDelegate, NMapPOId
     }
     
     // MARK: - NMapViewDelegate Methods
+    
     open func onMapView(_ mapView: NMapView!, initHandler error: NMapError!) {
         if (error == nil) { // success
             // set map center and level
@@ -112,12 +113,13 @@ class NaverLocationViewController: UIViewController , NMapViewDelegate, NMapPOId
     }
     
     // MARK: - NMapPOIdataOverlayDelegate Methods
+    
     open func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, imageForOverlayItem poiItem: NMapPOIitem!, selected: Bool) -> UIImage! {
-        return nil
+        return NMapViewResources.imageWithType(poiItem.poiFlagType, selected: selected)
     }
     
     open func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, anchorPointWithType poiFlagType: NMapPOIflagType) -> CGPoint {
-        return CGPoint(x: 0, y: 0)
+        return NMapViewResources.anchorPoint(withType: poiFlagType)
     }
     
     open func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, calloutOffsetWithType poiFlagType: NMapPOIflagType) -> CGPoint {
@@ -129,6 +131,7 @@ class NaverLocationViewController: UIViewController , NMapViewDelegate, NMapPOId
     }
     
     // MARK: - NMapLocationManagerDelegate Methods
+    
     open func locationManager(_ locationManager: NMapLocationManager!, didUpdateTo location: CLLocation!) {
         
         let coordinate = location.coordinate
@@ -230,6 +233,7 @@ class NaverLocationViewController: UIViewController , NMapViewDelegate, NMapPOId
     }
     
     // MARK: - Compass
+    
     func enableHeading() -> Bool {
         
         if let lm = NMapLocationManager.getSharedInstance() {
@@ -269,7 +273,7 @@ class NaverLocationViewController: UIViewController , NMapViewDelegate, NMapPOId
         let button = UIButton(type: .custom)
         
         button.frame = CGRect(x: 15, y: 30, width: 36, height: 36)
-        button.setImage( #imageLiteral(resourceName: "uploadImage.png"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "v4_btn_navi_location_normal"), for: .normal)
         
         button.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
         
@@ -309,11 +313,11 @@ class NaverLocationViewController: UIViewController , NMapViewDelegate, NMapPOId
         
         switch currentState {
         case .disabled:
-            changeStateButton?.setImage( #imageLiteral(resourceName: "angry.png"), for: .normal)
+            changeStateButton?.setImage(#imageLiteral(resourceName: "v4_btn_navi_location_normal"), for: .normal)
         case .tracking:
-            changeStateButton?.setImage( #imageLiteral(resourceName: "crying.png"), for: .normal)
+            changeStateButton?.setImage(#imageLiteral(resourceName: "v4_btn_navi_location_selected"), for: .normal)
         case .trackingWithHeading:
-            changeStateButton?.setImage( #imageLiteral(resourceName: "joy.png") , for: .normal)
+            changeStateButton?.setImage(#imageLiteral(resourceName: "v4_btn_navi_location_my"), for: .normal)
         }
     }
 

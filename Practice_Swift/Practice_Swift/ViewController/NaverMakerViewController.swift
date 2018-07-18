@@ -15,8 +15,6 @@ class NaverMakerViewController: UIViewController , NMapViewDelegate, NMapPOIdata
     @IBOutlet var calloutView: UIView!
     @IBOutlet weak var calloutLabel: UILabel!
     
-    @IBOutlet weak var naverMapView: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +68,7 @@ class NaverMakerViewController: UIViewController , NMapViewDelegate, NMapPOIdata
     }
     
     // MARK: - NMapViewDelegate Methods
+    
     open func onMapView(_ mapView: NMapView!, initHandler error: NMapError!) {
         if (error == nil) { // success
             // set map center and level
@@ -84,17 +83,17 @@ class NaverMakerViewController: UIViewController , NMapViewDelegate, NMapPOIdata
     }
     
     // MARK: - NMapPOIdataOverlayDelegate Methods
+    
     open func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, imageForOverlayItem poiItem: NMapPOIitem!, selected: Bool) -> UIImage! {
-        
-        return nil
+        return NMapViewResources.imageWithType(poiItem.poiFlagType, selected: selected);
     }
     
     open func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, anchorPointWithType poiFlagType: NMapPOIflagType) -> CGPoint {
-        return CGPoint(x: 0, y: 0)
+        return NMapViewResources.anchorPoint(withType: poiFlagType)
     }
     
     open func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, calloutOffsetWithType poiFlagType: NMapPOIflagType) -> CGPoint {
-        return CGPoint(x: 0.0, y: 0.0)
+        return CGPoint(x: 0.5, y: 0.0)
     }
     
     open func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, imageForCalloutOverlayItem poiItem: NMapPOIitem!, constraintSize: CGSize, selected: Bool, imageForCalloutRightAccessory: UIImage!, calloutPosition: UnsafeMutablePointer<CGPoint>!, calloutHit calloutHitRect: UnsafeMutablePointer<CGRect>!) -> UIImage! {
@@ -108,6 +107,7 @@ class NaverMakerViewController: UIViewController , NMapViewDelegate, NMapPOIdata
     }
     
     // MARK : Marker
+    
     func showMarkers() {
         
         if let mapOverlayManager = mapView?.mapOverlayManager {
@@ -116,7 +116,6 @@ class NaverMakerViewController: UIViewController , NMapViewDelegate, NMapPOIdata
             if let poiDataOverlay = mapOverlayManager.newPOIdataOverlay() {
                 
                 poiDataOverlay.initPOIdata(3)
-                
                 
                 poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.979, latitude: 37.567), title: "마커 1", type: UserPOIflagTypeDefault, iconIndex: 0, with: nil)
                 
