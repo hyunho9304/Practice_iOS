@@ -19,6 +19,9 @@
 		BEC84A0320F0BA350000399C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC84A0120F0BA350000399C /* LaunchScreen.storyboard */; };
 		BEC84A1220F0BB290000399C /* HiddenAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC84A1120F0BB290000399C /* HiddenAlertViewController.swift */; };
 		BEC84A1420F2123C0000399C /* HiddenAlert2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC84A1320F2123C0000399C /* HiddenAlert2ViewController.swift */; };
+		BEDF952F20FF255700A9099D /* NaverLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF952E20FF255700A9099D /* NaverLocationViewController.swift */; };
+		BEDF953120FF2F3A00A9099D /* NaverMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953020FF2F3A00A9099D /* NaverMakerViewController.swift */; };
+		BEDF953320FF322200A9099D /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953220FF322200A9099D /* NMapViewResources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +53,9 @@
 		BEC84A0420F0BA350000399C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC84A1120F0BB290000399C /* HiddenAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenAlertViewController.swift; sourceTree = "<group>"; };
 		BEC84A1320F2123C0000399C /* HiddenAlert2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenAlert2ViewController.swift; sourceTree = "<group>"; };
+		BEDF952E20FF255700A9099D /* NaverLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLocationViewController.swift; sourceTree = "<group>"; };
+		BEDF953020FF2F3A00A9099D /* NaverMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMakerViewController.swift; sourceTree = "<group>"; };
+		BEDF953220FF322200A9099D /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 		C1D027067F20541AC3CF6023 /* Pods-Practice_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Practice_Swift/Pods-Practice_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		E6EEE10FD92FF18DE3E8D7EC /* Pods-Practice_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Practice_Swift/Pods-Practice_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +118,6 @@
 				BEC849F820F0BA340000399C /* AppDelegate.swift */,
 				BEC84A1020F0BAED0000399C /* StoryBoard */,
 				BEC84A0F20F0BAE20000399C /* ViewController */,
-				BEC84A0B20F0BAC00000399C /* Util */,
 				BEC84A0A20F0BAB90000399C /* Asset */,
 				BE0821D520FDEE7D00AA3FC9 /* NaverMap_Bridging_Header.h */,
 			);
@@ -140,6 +145,7 @@
 		BEC84A0C20F0BAC90000399C /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				BEDF953220FF322200A9099D /* NMapViewResources.swift */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -165,6 +171,9 @@
 				BEC84A1320F2123C0000399C /* HiddenAlert2ViewController.swift */,
 				BE08218F20F7987B00AA3FC9 /* MyLocationViewController.swift */,
 				BE0821D620FDEFC900AA3FC9 /* NaverMapViewController.swift */,
+				BEDF952E20FF255700A9099D /* NaverLocationViewController.swift */,
+				BEDF953020FF2F3A00A9099D /* NaverMakerViewController.swift */,
+				BEC84A0B20F0BAC00000399C /* Util */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -311,8 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDF952F20FF255700A9099D /* NaverLocationViewController.swift in Sources */,
 				BE0821D720FDEFC900AA3FC9 /* NaverMapViewController.swift in Sources */,
 				BEC84A1420F2123C0000399C /* HiddenAlert2ViewController.swift in Sources */,
+				BEDF953120FF2F3A00A9099D /* NaverMakerViewController.swift in Sources */,
+				BEDF953320FF322200A9099D /* NMapViewResources.swift in Sources */,
 				BEC84A1220F0BB290000399C /* HiddenAlertViewController.swift in Sources */,
 				BEC849F920F0BA340000399C /* AppDelegate.swift in Sources */,
 				BE08219020F7987B00AA3FC9 /* MyLocationViewController.swift in Sources */,
