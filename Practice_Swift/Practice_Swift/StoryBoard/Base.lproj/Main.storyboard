@@ -295,18 +295,13 @@
                     <view key="view" contentMode="scaleToFill" id="ENK-UU-78U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOC-SH-oIz">
-                                <rect key="frame" x="0.0" y="163" width="375" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mGC-NE-PlR"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="pOC-SH-oIz" id="KYj-7b-Tgj"/>
+                        <outlet property="calloutImageView" destination="erv-hj-IlX" id="BkL-sd-EOQ"/>
+                        <outlet property="calloutTitleLabel" destination="5O7-8S-RXB" id="gz6-8I-nO5"/>
+                        <outlet property="calloutView" destination="wJv-Su-bZs" id="LeP-tt-vfW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBW-ja-uJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -334,7 +329,7 @@
                     <viewLayoutGuide key="safeArea" id="VZp-zX-wJy"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="5896.8000000000002" y="121.88905547226388"/>
+            <point key="canvasLocation" x="5338" y="1069"/>
         </scene>
     </scenes>
     <resources>
