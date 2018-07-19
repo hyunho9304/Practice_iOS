@@ -298,7 +298,7 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
                 // show all POI data
                 poiDataOverlay.showAllPOIdata()
                 
-                poiDataOverlay.selectPOIitem(at: 2, moveToCenter: false, focusedBySelectItem: true)
+                //poiDataOverlay.selectPOIitem(at: 2, moveToCenter: false, focusedBySelectItem: true)
                 
             }
         }
@@ -354,6 +354,7 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
         
         //  뷰 설정
         calloutTitleLabel.text = poiItem.title
+        calloutImageView.image = #imageLiteral(resourceName: "uploadImage.png")
         
         
         calloutPosition.pointee.x = round(calloutView.bounds.size.width / 2) + 1
