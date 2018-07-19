@@ -107,6 +107,8 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
         super.viewDidAppear(animated)
         
         navermapView?.viewDidAppear()
+        
+        showMarkers()   //  maker 보이게 설정
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -114,7 +116,7 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
         
         navermapView?.viewWillDisappear()
         
-        stopLocationUpdating()
+        stopLocationUpdating()  //  현재위치 err 시
     }
     
     
@@ -264,6 +266,49 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
             currentLocationBtn?.setImage(#imageLiteral(resourceName: "v4_btn_navi_location_my"), for: .normal)
         }
     }
+    
+    // MARK : Marker
+    
+    func showMarkers() {
+        
+        if let mapOverlayManager = navermapView?.mapOverlayManager {
+            
+            // create POI data overlay
+            if let poiDataOverlay = mapOverlayManager.newPOIdataOverlay() {
+                
+                poiDataOverlay.initPOIdata(7)
+                
+                
+                poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.922584, latitude: 37.554499), title: "버스킹존 1", type: UserPOIflagTypeDefault, iconIndex: 0, with: nil)
+                
+                poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.922639, latitude: 37.554532), title: "버스킹존 2", type: UserPOIflagTypeDefault, iconIndex: 1, with: nil)
+                
+                poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.922696, latitude: 37.554559), title: "버스킹존 3", type: UserPOIflagTypeDefault, iconIndex: 2, with: nil)
+                
+                poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.922759, latitude: 37.554605), title: "버스킹존 4", type: UserPOIflagTypeDefault, iconIndex: 3, with: nil)
+                
+                poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.922829, latitude: 37.554659), title: "버스킹존 5", type: UserPOIflagTypeDefault, iconIndex: 4, with: nil)
+                
+                poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.924679, latitude: 37.556004), title: "광장무대", type: UserPOIflagTypeDefault, iconIndex: 5, with: nil)
+                
+                poiDataOverlay.addPOIitem(atLocation: NGeoPoint(longitude: 126.925701, latitude: 37.556344), title: "여행무대", type: UserPOIflagTypeDefault, iconIndex: 6, with: nil)
+                
+                poiDataOverlay.endPOIdata()
+                
+                // show all POI data
+                poiDataOverlay.showAllPOIdata()
+                
+                poiDataOverlay.selectPOIitem(at: 2, moveToCenter: false, focusedBySelectItem: true)
+                
+            }
+        }
+    }
+    
+    func clearOverlays() {
+        if let mapOverlayManager = navermapView?.mapOverlayManager {
+            mapOverlayManager.clearOverlays()
+        }
+    }
   
     
 //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡdelegateㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
@@ -273,7 +318,7 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
         
         if (error == nil) { // success
             //  지도의 디폴드 위치 , 레벨 단계 **레벨단계 test 해야함
-            mapView.setMapCenter(NGeoPoint(longitude:126.923621, latitude:37.556694), atLevel:12)
+            mapView.setMapCenter(NGeoPoint(longitude:126.924017, latitude:37.555752), atLevel:12)
             // set for retina display
             mapView.setMapEnlarged(true, mapHD: true)
             // 모드설정 : vector/satelite/hybrid
@@ -301,7 +346,18 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
     
     func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, calloutOffsetWithType poiFlagType: NMapPOIflagType) -> CGPoint {
         
-        return CGPoint.zero
+        return CGPoint(x: 0.5, y: 0.0)
+    }
+    
+    //  마커 선택시 나타나는 뷰 설정
+    func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, viewForCalloutOverlayItem poiItem: NMapPOIitem!, calloutPosition: UnsafeMutablePointer<CGPoint>!) -> UIView! {
+        
+        //  뷰 설정
+        calloutTitleLabel.text = poiItem.title
+        
+        
+        calloutPosition.pointee.x = round(calloutView.bounds.size.width / 2) + 1
+        return calloutView
     }
 
 //  NMapLocationManagerDelegate Methods
