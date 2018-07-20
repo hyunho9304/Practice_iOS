@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yaq-tg-22U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AgM-lZ-wXn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="2463.1999999999998" y="140.77961019490255"/>
         </scene>
-        <!--Naver Map View Controller-->
+        <!--혼자한것-->
         <scene sceneID="uxb-eC-GS7">
             <objects>
-                <viewController storyboardIdentifier="NaverMapViewController" id="FZT-bH-OaT" customClass="NaverMapViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NaverMapViewController" id="FZT-bH-OaT" userLabel="혼자한것" customClass="NaverMapViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bn3-ph-bRO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,10 +231,10 @@
             </objects>
             <point key="canvasLocation" x="3348" y="139.880059970015"/>
         </scene>
-        <!--Naver Location View Controller-->
+        <!--네이버 현재위치-->
         <scene sceneID="Csr-it-iHi">
             <objects>
-                <viewController storyboardIdentifier="NaverLocationViewController" id="X87-v8-mAA" customClass="NaverLocationViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NaverLocationViewController" id="X87-v8-mAA" userLabel="네이버 현재위치" customClass="NaverLocationViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nTR-zu-4Wt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="4228" y="132"/>
         </scene>
-        <!--Naver Maker View Controller-->
+        <!--네이버 마커표시-->
         <scene sceneID="KtA-K1-FTv">
             <objects>
-                <viewController storyboardIdentifier="NaverMakerViewController" id="BoL-rS-kyB" customClass="NaverMakerViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NaverMakerViewController" id="BoL-rS-kyB" userLabel="네이버 마커표시" customClass="NaverMakerViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bUX-6j-QYB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,16 +288,46 @@
             </objects>
             <point key="canvasLocation" x="5069.6000000000004" y="121.88905547226388"/>
         </scene>
-        <!--My Naver Map View Controller-->
+        <!--Item-->
+        <scene sceneID="dXs-yO-qjk">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="PKW-Bl-v6A" customClass="HomeViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B8r-WV-d3y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-O8-EQo">
+                                <rect key="frame" x="202" y="109" width="97" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="네이버 지도">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0Gv-nd-4xT"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="z6x-tO-jjB"/>
+                    <connections>
+                        <outlet property="naverMapBtn" destination="bcW-O8-EQo" id="jbe-LR-XnN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCr-MB-ReA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5406" y="791"/>
+        </scene>
+        <!--네이버 마커 + 현재위치-->
         <scene sceneID="SYX-2X-HbE">
             <objects>
-                <viewController id="Yaq-tg-22U" customClass="MyNaverMapViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyNaverMapViewController" id="Yaq-tg-22U" userLabel="네이버 마커 + 현재위치" customClass="MyNaverMapViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ENK-UU-78U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mGC-NE-PlR"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="d9a-yk-Mcv"/>
                     <connections>
                         <outlet property="calloutImageView" destination="erv-hj-IlX" id="BkL-sd-EOQ"/>
                         <outlet property="calloutTitleLabel" destination="5O7-8S-RXB" id="gz6-8I-nO5"/>
@@ -356,7 +386,52 @@
                     <viewLayoutGuide key="safeArea" id="VZp-zX-wJy"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="5338" y="1069"/>
+            <point key="canvasLocation" x="6297" y="1417"/>
+        </scene>
+        <!--Busking Detail View Controller-->
+        <scene sceneID="qC9-cu-cQo">
+            <objects>
+                <viewController storyboardIdentifier="BuskingDetailViewController" id="cxX-Qt-Kwg" customClass="BuskingDetailViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gGy-tD-YOl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJC-qL-qos">
+                                <rect key="frame" x="136" y="147" width="102" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bxR-Iv-o4k"/>
+                    </view>
+                    <connections>
+                        <outlet property="buskingIndex" destination="VJC-qL-qos" id="qsm-nL-Sqg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcN-FP-oZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7252" y="1416.3418290854574"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ycP-hT-Q6R">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AgM-lZ-wXn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bFp-kJ-eq7">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PKW-Bl-v6A" kind="relationship" relationship="viewControllers" id="VVc-Js-LEk"/>
+                        <segue destination="Yaq-tg-22U" kind="relationship" relationship="viewControllers" id="NdZ-rE-eIb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRG-SZ-6Jg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4540" y="1418"/>
         </scene>
     </scenes>
     <resources>

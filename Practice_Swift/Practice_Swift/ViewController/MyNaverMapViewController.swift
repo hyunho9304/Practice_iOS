@@ -36,12 +36,14 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
 
 //  ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ마커ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     @IBOutlet var calloutView: UIView!  //  마커뷰
+    var calloutIndex : String?  //  callout index 번호 저장해서 다음뷰에 넘길때 알수있도록 한다.
     @IBOutlet weak var calloutImageView: UIImageView!   //  마커 이미지
     @IBOutlet weak var calloutTitleLabel: UILabel!  //  마커 제목
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.isTranslucent = false
         
         //  네이버지도 생성
@@ -298,6 +300,7 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
                 // show all POI data
                 poiDataOverlay.showAllPOIdata()
                 
+                //  디폴트로 선택누르고 있는거
                 //poiDataOverlay.selectPOIitem(at: 2, moveToCenter: false, focusedBySelectItem: true)
                 
             }
@@ -353,13 +356,27 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
     func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, viewForCalloutOverlayItem poiItem: NMapPOIitem!, calloutPosition: UnsafeMutablePointer<CGPoint>!) -> UIView! {
         
         //  뷰 설정
+        calloutIndex = String(poiItem.iconIndex)        //  index 설정해서 다음뷰에 넘길때 알려준다
         calloutTitleLabel.text = poiItem.title
         calloutImageView.image = #imageLiteral(resourceName: "uploadImage.png")
-        
         
         calloutPosition.pointee.x = round(calloutView.bounds.size.width / 2) + 1
         return calloutView
     }
+    
+    // 마커 선택??????????????????????
+    func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, didSelectCalloutOfPOIitemAt index: Int32, with object: Any!) -> Bool {
+        
+//
+//        let buskingDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BuskingDetailViewController") as? BuskingDetailViewController
+//
+//        buskingDetailVC?.tempText = String(index)
+//
+//        self.present( buskingDetailVC! , animated: true , completion: nil )
+//
+        return true
+    }
+    
 
 //  NMapLocationManagerDelegate Methods
     func locationManager(_ locationManager: NMapLocationManager!, didUpdateTo location: CLLocation!) {
