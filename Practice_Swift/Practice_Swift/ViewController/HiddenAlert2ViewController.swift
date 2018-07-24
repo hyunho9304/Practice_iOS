@@ -42,7 +42,6 @@ class HiddenAlert2ViewController: UIViewController {
         }
     }
     
-    
     @objc func pressedAlertBackBtn( _ sender : UIButton ) {
         
         if alertUp == true {
