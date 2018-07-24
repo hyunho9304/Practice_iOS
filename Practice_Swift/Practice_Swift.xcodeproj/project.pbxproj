@@ -30,6 +30,7 @@
 		BEDF9540210733D200A9099D /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953F210733D200A9099D /* APIservice.swift */; };
 		BEDF9542210733F900A9099D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF9541210733F900A9099D /* Calendar.swift */; };
 		BEDF95442107366600A9099D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF95432107366600A9099D /* Server.swift */; };
+		BEDF95462107479500A9099D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF95452107479500A9099D /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +73,7 @@
 		BEDF953F210733D200A9099D /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
 		BEDF9541210733F900A9099D /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		BEDF95432107366600A9099D /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		BEDF95452107479500A9099D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C1D027067F20541AC3CF6023 /* Pods-Practice_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Practice_Swift/Pods-Practice_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		E6EEE10FD92FF18DE3E8D7EC /* Pods-Practice_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Practice_Swift/Pods-Practice_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDF953220FF322200A9099D /* NMapViewResources.swift */,
+				BEDF95452107479500A9099D /* Extension.swift */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				BEDF953120FF2F3A00A9099D /* NaverMakerViewController.swift in Sources */,
 				BEDF953320FF322200A9099D /* NMapViewResources.swift in Sources */,
 				BEDF95372101E23400A9099D /* HomeViewController.swift in Sources */,
+				BEDF95462107479500A9099D /* Extension.swift in Sources */,
 				BEC84A1220F0BB290000399C /* HiddenAlertViewController.swift in Sources */,
 				BEC849F920F0BA340000399C /* AppDelegate.swift in Sources */,
 				BE08219020F7987B00AA3FC9 /* MyLocationViewController.swift in Sources */,

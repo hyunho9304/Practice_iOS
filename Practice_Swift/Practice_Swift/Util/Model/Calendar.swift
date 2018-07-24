@@ -10,9 +10,9 @@ import Foundation
 
 struct Calendar : Codable {
     
-    let twoWeeksYear : [ Int ]?
-    let twoWeeksMonth : [ Int ]?
-    let twoWeeksDate : [ Int ]?
+    let twoWeeksYear : [ String ]?
+    let twoWeeksMonth : [ String ]?
+    let twoWeeksDate : [ String ]?
     let twoWeeksDay : [ String ]?
 }
 

@@ -38,29 +38,33 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
                 self.calendar = calendarData
                 self.calendarCollectionView.reloadData()
                 
-                var year : String = ""
-                var month : String = ""
-                var date : String = ""
-                var day : String = ""
+                //  중요 => 여러가지 int to string 방법,, 한가지 변환하는것도 중요에 있음
+//                if let tmpYear = self.calendar?.twoWeeksYear![0], let tmpMonth = self.calendar?.twoWeeksMonth![0] , let tmpDate = self.calendar?.twoWeeksDate![0]   {
+//
+//                    year = String( tmpYear )
+//                    month = String( tmpMonth )
+//                    date = String( tmpDate )
+//                    day = (self.calendar?.twoWeeksDay![0])!
+//
+//                }
                 
-                if let tmpYear = self.calendar?.twoWeeksYear![0], let tmpMonth = self.calendar?.twoWeeksMonth![0] , let tmpDate = self.calendar?.twoWeeksDate![0]   {
-                    
-                    year = String( tmpYear )
-                    month = String( tmpMonth )
-                    date = String( tmpDate )
-                    day = (self.calendar?.twoWeeksDay![0])!
+                let year = self.calendar?.twoWeeksYear![0]
+                let month = self.calendar?.twoWeeksMonth![0]
+                let date = self.calendar?.twoWeeksDate![0]
+                let day = self.calendar?.twoWeeksDay![0]
 
-                }
+                var tmpDateTime = ""
+                tmpDateTime.append( year!)
+                tmpDateTime.append( "년 " )
+                tmpDateTime.append( month! )
+                tmpDateTime.append( "월 " )
+                tmpDateTime.append( date! )
+                tmpDateTime.append( "일 " )
+                tmpDateTime.append( day! )
                 
-                self.selectDateTime.text = year + "년 " + month + "월 " + date + "일 " + day
-//
-//
-//                var year = String(self.calendar?.twoWeeksYear![0])
-//                let month = String(self.calendar?.twoWeeksMonth![0])
-//                let date = String(self.calendar?.twoWeeksDate![0])
-//                let day = self.calendar?.twoWeeksDay![0]
-//
-//                self.selectDateTime.text = year + "년 " + month + "월 " + date + "일 " + day
+                self.selectDateTime.text = tmpDateTime
+                
+                //self.selectDateTime.text = year + "년 " + month + "월 " + date + "일 " + day
                 
             } else {
                 
@@ -86,10 +90,12 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalendarCollectionViewCell", for: indexPath ) as! CalendarCollectionViewCell
         
         cell.calendarDayLabel.text = calendar?.twoWeeksDay![ indexPath.row ]
+        cell.calendarDateLabel.text = calendar?.twoWeeksDate![ indexPath.row ]
         
-        if let tmpData = calendar?.twoWeeksDate![ indexPath.row ] {
-            cell.calendarDateLabel.text = String( tmpData )
-        }
+        //  중요 => int로 받았을 때 string 변환 안되서 text 할수없을 때 변환방법
+//        if let tmpData = calendar?.twoWeeksDate![ indexPath.row ] {
+//            cell.calendarDateLabel.text = String( tmpData )
+//        }
         
         return cell
     
