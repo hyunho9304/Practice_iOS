@@ -487,9 +487,19 @@
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lae-q7-egc">
                                 <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="datetime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M76-V3-4IX">
+                                        <rect key="frame" x="119" y="13" width="137" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Lae-q7-egc" secondAttribute="height" multiplier="125:193" id="Cpq-tW-mwr"/>
+                                    <constraint firstItem="M76-V3-4IX" firstAttribute="top" secondItem="Lae-q7-egc" secondAttribute="top" constant="13" id="Dtz-kk-B0o"/>
+                                    <constraint firstItem="M76-V3-4IX" firstAttribute="centerX" secondItem="Lae-q7-egc" secondAttribute="centerX" id="S11-Sp-EAG"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -508,6 +518,7 @@
                     </view>
                     <connections>
                         <outlet property="calendarCollectionView" destination="1BR-Gw-Ov6" id="Cyp-fu-LKr"/>
+                        <outlet property="selectDateTime" destination="M76-V3-4IX" id="Ch5-fL-TEn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4D-YO-lox" userLabel="First Responder" sceneMemberID="firstResponder"/>

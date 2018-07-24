@@ -14,6 +14,8 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     var calendar : Calendar?
     
+    @IBOutlet weak var selectDateTime: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,30 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
                 
                 self.calendar = calendarData
                 self.calendarCollectionView.reloadData()
+                
+                var year : String = ""
+                var month : String = ""
+                var date : String = ""
+                var day : String = ""
+                
+                if let tmpYear = self.calendar?.twoWeeksYear![0], let tmpMonth = self.calendar?.twoWeeksMonth![0] , let tmpDate = self.calendar?.twoWeeksDate![0]   {
+                    
+                    year = String( tmpYear )
+                    month = String( tmpMonth )
+                    date = String( tmpDate )
+                    day = (self.calendar?.twoWeeksDay![0])!
+
+                }
+                
+                self.selectDateTime.text = year + "년 " + month + "월 " + date + "일 " + day
+//
+//
+//                var year = String(self.calendar?.twoWeeksYear![0])
+//                let month = String(self.calendar?.twoWeeksMonth![0])
+//                let date = String(self.calendar?.twoWeeksDate![0])
+//                let day = self.calendar?.twoWeeksDay![0]
+//
+//                self.selectDateTime.text = year + "년 " + month + "월 " + date + "일 " + day
                 
             } else {
                 
