@@ -27,6 +27,9 @@
 		BEDF95392101E29400A9099D /* BuskingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF95382101E29400A9099D /* BuskingDetailViewController.swift */; };
 		BEDF953B2107165400A9099D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953A2107165400A9099D /* CalendarViewController.swift */; };
 		BEDF953E2107192C00A9099D /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953D2107192C00A9099D /* CalendarCollectionViewCell.swift */; };
+		BEDF9540210733D200A9099D /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953F210733D200A9099D /* APIservice.swift */; };
+		BEDF9542210733F900A9099D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF9541210733F900A9099D /* Calendar.swift */; };
+		BEDF95442107366600A9099D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF95432107366600A9099D /* Server.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +69,9 @@
 		BEDF95382101E29400A9099D /* BuskingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuskingDetailViewController.swift; sourceTree = "<group>"; };
 		BEDF953A2107165400A9099D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		BEDF953D2107192C00A9099D /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEDF953F210733D200A9099D /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
+		BEDF9541210733F900A9099D /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		BEDF95432107366600A9099D /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		C1D027067F20541AC3CF6023 /* Pods-Practice_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Practice_Swift/Pods-Practice_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		E6EEE10FD92FF18DE3E8D7EC /* Pods-Practice_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Practice_Swift/Pods-Practice_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +171,7 @@
 		BEC84A0D20F0BAD50000399C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BEDF9541210733F900A9099D /* Calendar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +179,8 @@
 		BEC84A0E20F0BADB0000399C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BEDF953F210733D200A9099D /* APIservice.swift */,
+				BEDF95432107366600A9099D /* Server.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -347,6 +356,7 @@
 				BEDF952F20FF255700A9099D /* NaverLocationViewController.swift in Sources */,
 				BEDF953E2107192C00A9099D /* CalendarCollectionViewCell.swift in Sources */,
 				BEDF95392101E29400A9099D /* BuskingDetailViewController.swift in Sources */,
+				BEDF9542210733F900A9099D /* Calendar.swift in Sources */,
 				BE0821D720FDEFC900AA3FC9 /* NaverMapViewController.swift in Sources */,
 				BEC84A1420F2123C0000399C /* HiddenAlert2ViewController.swift in Sources */,
 				BEDF953120FF2F3A00A9099D /* NaverMakerViewController.swift in Sources */,
@@ -355,6 +365,8 @@
 				BEC84A1220F0BB290000399C /* HiddenAlertViewController.swift in Sources */,
 				BEC849F920F0BA340000399C /* AppDelegate.swift in Sources */,
 				BE08219020F7987B00AA3FC9 /* MyLocationViewController.swift in Sources */,
+				BEDF9540210733D200A9099D /* APIservice.swift in Sources */,
+				BEDF95442107366600A9099D /* Server.swift in Sources */,
 				BEDF95352100570500A9099D /* MyNaverMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
