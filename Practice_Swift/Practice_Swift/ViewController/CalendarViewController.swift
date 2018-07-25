@@ -97,6 +97,12 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     }
     
+    //  cell 누르다가 땠을 때 안의 내용변화
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+
+        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
+        cell.calendarCircleImageView.isHidden = true
+    }
 
     
     //  cell 누르고 있을 때 안의 내용변화
