@@ -28,12 +28,19 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         dateTimeInit()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        dateTimeInit()
+        
+    }
+    
     func setting() {
         
         calendarCollectionView.delegate = self
         calendarCollectionView.dataSource = self
         
         selectDateTime.isHidden = true
+        
     }
     
     func dateTimeInit() {
@@ -107,14 +114,15 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     //  cell 선택 했을 때
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
         
-        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
+        let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell
         
         //  중요 => color 색 변화
         //  color riteral
-        cell.calendarDayLabel.textColor = UIColor( red: 255, green: 0, blue: 0, alpha: 1.0 )
-        cell.calendarDateLabel.textColor = UIColor( red: 255 , green: 255 , blue: 255 , alpha: 1.0 )
-        cell.calendarCircleImageView.isHidden = false
+        cell?.calendarDayLabel.textColor = UIColor( red: 255, green: 0, blue: 0, alpha: 1.0 )
+        cell?.calendarDateLabel.textColor = UIColor( red: 255 , green: 255 , blue: 255 , alpha: 1.0 )
+        cell?.calendarCircleImageView.isHidden = false
         
         self.selectYear = self.calendar?.twoWeeksYear![ indexPath.row ]
         self.selectMonth = self.calendar?.twoWeeksMonth![ indexPath.row ]
@@ -129,11 +137,12 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     //  cell 선택 해제 했을 때
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
 
-        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
-        cell.calendarDayLabel.textColor = UIColor( red: 0, green: 0, blue: 0, alpha: 1.0 )
-        cell.calendarDateLabel.textColor = UIColor( red: 0 , green: 0 , blue: 0 , alpha: 1.0 )
-        cell.calendarCircleImageView.isHidden = true
+        let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell
+        cell?.calendarDayLabel.textColor = UIColor( red: 0, green: 0, blue: 0, alpha: 1.0 )
+        cell?.calendarDateLabel.textColor = UIColor( red: 0 , green: 0 , blue: 0 , alpha: 1.0 )
+        cell?.calendarCircleImageView.isHidden = true
 
     }
     
@@ -142,9 +151,4 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         
         return 0
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-
 }
