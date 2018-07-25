@@ -32,6 +32,8 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         
         calendarCollectionView.delegate = self
         calendarCollectionView.dataSource = self
+        
+        selectDateTime.isHidden = true
     }
     
     func dateTimeInit() {
@@ -120,6 +122,8 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         self.selectDay = self.calendar?.twoWeeksDay![ indexPath.row ]
         
         self.selectDateTime.text = self.selectYear! + "년 " + self.selectMonth! + "월 " + self.selectDate! + "일 " + self.selectDay!
+        
+        self.selectDateTime.isHidden = false
         
     }
     
