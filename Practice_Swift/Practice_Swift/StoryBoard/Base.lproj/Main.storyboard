@@ -421,6 +421,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AgM-lZ-wXn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bFp-kJ-eq7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -458,15 +459,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="55" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz9-Bp-x10">
-                                                    <rect key="frame" x="16" y="32" width="23" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle2" translatesAutoresizingMaskIntoConstraints="NO" id="0js-PF-cGo">
+                                                    <rect key="frame" x="10" y="28" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="0js-PF-cGo" secondAttribute="height" multiplier="1:1" id="57M-35-cp5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yu-8r-dSV">
+                                                    <rect key="frame" x="22" y="12" width="11.5" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="화" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yu-8r-dSV">
-                                                    <rect key="frame" x="21.5" y="12" width="11.5" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz9-Bp-x10">
+                                                    <rect key="frame" x="23.5" y="34" width="8.5" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -474,9 +481,12 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="7Yu-8r-dSV" firstAttribute="centerX" secondItem="huc-CK-pUM" secondAttribute="centerX" id="3gn-Mx-bxf"/>
-                                            <constraint firstAttribute="bottom" secondItem="Sz9-Bp-x10" secondAttribute="bottom" constant="13" id="Ihw-9N-f3B"/>
-                                            <constraint firstItem="Sz9-Bp-x10" firstAttribute="centerX" secondItem="huc-CK-pUM" secondAttribute="centerX" id="TdP-bu-bTI"/>
+                                            <constraint firstItem="0js-PF-cGo" firstAttribute="centerX" secondItem="huc-CK-pUM" secondAttribute="centerX" id="FyG-BW-8lC"/>
+                                            <constraint firstItem="0js-PF-cGo" firstAttribute="width" secondItem="huc-CK-pUM" secondAttribute="width" multiplier="35:55" id="GyJ-Uv-2PM"/>
                                             <constraint firstItem="7Yu-8r-dSV" firstAttribute="top" secondItem="huc-CK-pUM" secondAttribute="top" constant="12" id="l2o-6Q-fg1"/>
+                                            <constraint firstItem="Sz9-Bp-x10" firstAttribute="centerX" secondItem="0js-PF-cGo" secondAttribute="centerX" id="mlc-aL-9Bg"/>
+                                            <constraint firstAttribute="bottom" secondItem="0js-PF-cGo" secondAttribute="bottom" constant="5" id="xrr-Q4-8v0"/>
+                                            <constraint firstItem="Sz9-Bp-x10" firstAttribute="centerY" secondItem="0js-PF-cGo" secondAttribute="centerY" id="y4G-lF-R2D"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="calendarDateLabel" destination="Sz9-Bp-x10" id="Ey9-Hv-eRn"/>
@@ -527,6 +537,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle2" width="768" height="768"/>
         <image name="uploadImage" width="800" height="676"/>
         <image name="v4_tooltip_distance1" width="19" height="28"/>
         <image name="v4_tooltip_distance2" width="7" height="6"/>

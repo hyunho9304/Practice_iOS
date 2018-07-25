@@ -14,6 +14,11 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     var calendar : Calendar?
     
+    var selectYear : String?
+    var selectMonth : String?
+    var selectDate : String?
+    var selectDay : String?
+    
     @IBOutlet weak var selectDateTime: UILabel!
     
     override func viewDidLoad() {
@@ -48,23 +53,14 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
 //
 //                }
                 
-                let year = self.calendar?.twoWeeksYear![0]
-                let month = self.calendar?.twoWeeksMonth![0]
-                let date = self.calendar?.twoWeeksDate![0]
-                let day = self.calendar?.twoWeeksDay![0]
-
-                var tmpDateTime = ""
-                tmpDateTime.append( year!)
-                tmpDateTime.append( "년 " )
-                tmpDateTime.append( month! )
-                tmpDateTime.append( "월 " )
-                tmpDateTime.append( date! )
-                tmpDateTime.append( "일 " )
-                tmpDateTime.append( day! )
+              
+                self.selectYear = self.calendar?.twoWeeksYear![0]
+                self.selectMonth = self.calendar?.twoWeeksMonth![0]
+                self.selectDate = self.calendar?.twoWeeksDate![0]
+                self.selectDay = self.calendar?.twoWeeksDay![0]
                 
-                self.selectDateTime.text = tmpDateTime
+                self.selectDateTime.text = self.selectYear! + "년 " + self.selectMonth! + "월 " + self.selectDate! + "일 " + self.selectDay!
                 
-                //self.selectDateTime.text = year + "년 " + month + "월 " + date + "일 " + day
                 
             } else {
                 
@@ -101,11 +97,16 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     }
     
-//    //  cell 선택했을 때
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//
-//    }
+    //  cell 선택했을 때
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        self.selectYear = self.calendar?.twoWeeksYear![ indexPath.row ]
+        self.selectMonth = self.calendar?.twoWeeksMonth![ indexPath.row ]
+        self.selectDate = self.calendar?.twoWeeksDate![ indexPath.row ]
+        self.selectDay = self.calendar?.twoWeeksDay![ indexPath.row ]
+        
+        self.selectDateTime.text = self.selectYear! + "년 " + self.selectMonth! + "월 " + self.selectDate! + "일 " + self.selectDay!
+    }
     
     //  cell 크기 비율
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
