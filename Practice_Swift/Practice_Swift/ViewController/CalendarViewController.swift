@@ -21,6 +21,8 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     @IBOutlet weak var selectDateTime: UILabel!
     
+    var selectedIndex:IndexPath?   //  선택고려
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -89,12 +91,25 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         cell.calendarDateLabel.text = calendar?.twoWeeksDate![ indexPath.row ]
         
         //  중요 => int로 받았을 때 string 변환 안되서 text 할수없을 때 변환방법
-//        if let tmpData = calendar?.twoWeeksDate![ indexPath.row ] {
-//            cell.calendarDateLabel.text = String( tmpData )
-//        }
+        //        if let tmpData = calendar?.twoWeeksDate![ indexPath.row ] {
+        //            cell.calendarDateLabel.text = String( tmpData )
+        //        }
+
+        if indexPath == selectedIndex {
+            
+            cell.calendarDayLabel.textColor = UIColor( red: 255, green: 0, blue: 0, alpha: 1.0 )
+            cell.calendarDateLabel.textColor = UIColor( red: 255 , green: 255 , blue: 255 , alpha: 1.0 )
+            cell.calendarCircleImageView.isHidden = false
+        }
+        else {
+            
+            cell.calendarDayLabel.textColor = UIColor( red: 0, green: 0, blue: 0, alpha: 1.0 )
+            cell.calendarDateLabel.textColor = UIColor( red: 0 , green: 0 , blue: 0 , alpha: 1.0 )
+            cell.calendarCircleImageView.isHidden = true
+        }
         
         return cell
-    
+        
     }
    
     //  중요 => cell 하이라이트
@@ -111,19 +126,12 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     //        cell.calendarCircleImageView.isHidden = false
     //    }
     
-    
     //  cell 선택 했을 때
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        
-        let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell
-        
-        //  중요 => color 색 변화
-        //  color riteral
-        cell?.calendarDayLabel.textColor = UIColor( red: 255, green: 0, blue: 0, alpha: 1.0 )
-        cell?.calendarDateLabel.textColor = UIColor( red: 255 , green: 255 , blue: 255 , alpha: 1.0 )
-        cell?.calendarCircleImageView.isHidden = false
-        
+        selectedIndex = indexPath
+        collectionView.reloadData()
+
         self.selectYear = self.calendar?.twoWeeksYear![ indexPath.row ]
         self.selectMonth = self.calendar?.twoWeeksMonth![ indexPath.row ]
         self.selectDate = self.calendar?.twoWeeksDate![ indexPath.row ]
@@ -133,17 +141,6 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         
         self.selectDateTime.isHidden = false
         
-    }
-    
-    //  cell 선택 해제 했을 때
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
-
-        let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell
-        cell?.calendarDayLabel.textColor = UIColor( red: 0, green: 0, blue: 0, alpha: 1.0 )
-        cell?.calendarDateLabel.textColor = UIColor( red: 0 , green: 0 , blue: 0 , alpha: 1.0 )
-        cell?.calendarCircleImageView.isHidden = true
-
     }
     
     //  cell 간 가로 간격 ( horizental 이라서 가로를 사용해야 한다 )
