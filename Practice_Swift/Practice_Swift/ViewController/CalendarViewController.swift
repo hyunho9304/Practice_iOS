@@ -97,37 +97,15 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     }
     
-    //  cell 누르다가 땠을 때 안의 내용변화
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-
-        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
-        cell.calendarCircleImageView.isHidden = true
-    }
-
-    
-    //  cell 누르고 있을 때 안의 내용변화
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-
-        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
-        cell.calendarCircleImageView.isHidden = false
-    }
-  
-
     //  cell 선택했을 때
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+
         self.selectYear = self.calendar?.twoWeeksYear![ indexPath.row ]
         self.selectMonth = self.calendar?.twoWeeksMonth![ indexPath.row ]
         self.selectDate = self.calendar?.twoWeeksDate![ indexPath.row ]
         self.selectDay = self.calendar?.twoWeeksDay![ indexPath.row ]
         
         self.selectDateTime.text = self.selectYear! + "년 " + self.selectMonth! + "월 " + self.selectDate! + "일 " + self.selectDay!
-    }
-    
-    //  cell 크기 비율
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 55 * self.view.frame.width/375 , height: 68 * self.view.frame.height/667 )
     }
     
     //  cell 간 가로 간격 ( horizental 이라서 가로를 사용해야 한다 )
