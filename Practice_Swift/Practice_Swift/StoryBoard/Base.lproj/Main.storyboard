@@ -459,20 +459,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="55" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle2" translatesAutoresizingMaskIntoConstraints="NO" id="0js-PF-cGo">
-                                                    <rect key="frame" x="10" y="28" width="35" height="35"/>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_Red" translatesAutoresizingMaskIntoConstraints="NO" id="0js-PF-cGo">
+                                                    <rect key="frame" x="5" y="22" width="45" height="45"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="0js-PF-cGo" secondAttribute="height" multiplier="1:1" id="57M-35-cp5"/>
+                                                        <constraint firstAttribute="width" secondItem="0js-PF-cGo" secondAttribute="height" multiplier="1:1" id="yCd-ME-iQG"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yu-8r-dSV">
-                                                    <rect key="frame" x="22" y="12" width="11.5" height="16"/>
+                                                    <rect key="frame" x="22" y="7" width="11.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz9-Bp-x10">
-                                                    <rect key="frame" x="23.5" y="34" width="8.5" height="23"/>
+                                                    <rect key="frame" x="23" y="33" width="9" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -481,12 +481,12 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="7Yu-8r-dSV" firstAttribute="centerX" secondItem="huc-CK-pUM" secondAttribute="centerX" id="3gn-Mx-bxf"/>
-                                            <constraint firstItem="0js-PF-cGo" firstAttribute="centerX" secondItem="huc-CK-pUM" secondAttribute="centerX" id="FyG-BW-8lC"/>
-                                            <constraint firstItem="0js-PF-cGo" firstAttribute="width" secondItem="huc-CK-pUM" secondAttribute="width" multiplier="35:55" id="GyJ-Uv-2PM"/>
-                                            <constraint firstItem="7Yu-8r-dSV" firstAttribute="top" secondItem="huc-CK-pUM" secondAttribute="top" constant="12" id="l2o-6Q-fg1"/>
-                                            <constraint firstItem="Sz9-Bp-x10" firstAttribute="centerX" secondItem="0js-PF-cGo" secondAttribute="centerX" id="mlc-aL-9Bg"/>
-                                            <constraint firstAttribute="bottom" secondItem="0js-PF-cGo" secondAttribute="bottom" constant="5" id="xrr-Q4-8v0"/>
-                                            <constraint firstItem="Sz9-Bp-x10" firstAttribute="centerY" secondItem="0js-PF-cGo" secondAttribute="centerY" id="y4G-lF-R2D"/>
+                                            <constraint firstItem="0js-PF-cGo" firstAttribute="width" secondItem="huc-CK-pUM" secondAttribute="width" multiplier="45:55" id="5F1-G2-K0z"/>
+                                            <constraint firstItem="0js-PF-cGo" firstAttribute="centerX" secondItem="huc-CK-pUM" secondAttribute="centerX" id="f35-2r-7rL"/>
+                                            <constraint firstItem="Sz9-Bp-x10" firstAttribute="centerY" secondItem="0js-PF-cGo" secondAttribute="centerY" id="h0C-DD-3Ba"/>
+                                            <constraint firstItem="7Yu-8r-dSV" firstAttribute="top" secondItem="huc-CK-pUM" secondAttribute="top" constant="7" id="l2o-6Q-fg1"/>
+                                            <constraint firstAttribute="bottom" secondItem="0js-PF-cGo" secondAttribute="bottom" constant="1" id="m8Y-SG-cRx"/>
+                                            <constraint firstItem="Sz9-Bp-x10" firstAttribute="centerX" secondItem="0js-PF-cGo" secondAttribute="centerX" id="u2t-rZ-rtY"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="calendarCircleImageView" destination="0js-PF-cGo" id="T4Q-Ca-q2y"/>
@@ -499,10 +499,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lae-q7-egc">
                                 <rect key="frame" x="0.0" y="88" width="375" height="579"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="datetime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M76-V3-4IX">
-                                        <rect key="frame" x="119" y="13" width="137" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="datetime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M76-V3-4IX">
+                                        <rect key="frame" x="152" y="13" width="71.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -538,7 +538,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circle2" width="768" height="768"/>
+        <image name="circle_Red" width="300" height="300"/>
         <image name="uploadImage" width="800" height="676"/>
         <image name="v4_tooltip_distance1" width="19" height="28"/>
         <image name="v4_tooltip_distance2" width="7" height="6"/>

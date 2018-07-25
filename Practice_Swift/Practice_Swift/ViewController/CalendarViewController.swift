@@ -97,14 +97,13 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     }
    
+    //  중요 => cell 하이라이트
     //    //    cell 누르다가 땠을 때 안의 내용변화
     //    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
     //
     //        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
     //        cell.calendarCircleImageView.isHidden = true
     //    }
-    
-    
     //    //    cell 누르고 있을 때 안의 내용변화
     //    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
     //
@@ -117,8 +116,12 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
-        cell.calendarCircleImageView.isHidden = false
         
+        //  중요 => color 색 변화
+        //  color riteral
+        cell.calendarDayLabel.textColor = UIColor( red: 255, green: 0, blue: 0, alpha: 1.0 )
+        cell.calendarDateLabel.textColor = UIColor( red: 255 , green: 255 , blue: 255 , alpha: 1.0 )
+        cell.calendarCircleImageView.isHidden = false
         
         self.selectYear = self.calendar?.twoWeeksYear![ indexPath.row ]
         self.selectMonth = self.calendar?.twoWeeksMonth![ indexPath.row ]
@@ -132,6 +135,8 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
+        cell.calendarDayLabel.textColor = UIColor( red: 0, green: 0, blue: 0, alpha: 1.0 )
+        cell.calendarDateLabel.textColor = UIColor( red: 0 , green: 0 , blue: 0 , alpha: 1.0 )
         cell.calendarCircleImageView.isHidden = true
     }
     
