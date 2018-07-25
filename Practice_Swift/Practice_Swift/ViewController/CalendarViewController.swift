@@ -113,7 +113,7 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     //    }
     
     
-    //  cell 선택했을 때
+    //  cell 선택 했을 때
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
@@ -126,6 +126,13 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         self.selectDay = self.calendar?.twoWeeksDay![ indexPath.row ]
         
         self.selectDateTime.text = self.selectYear! + "년 " + self.selectMonth! + "월 " + self.selectDate! + "일 " + self.selectDay!
+    }
+    
+    //  cell 선택 해제 했을 때
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
+        cell.calendarCircleImageView.isHidden = true
     }
     
     //  cell 간 가로 간격 ( horizental 이라서 가로를 사용해야 한다 )
