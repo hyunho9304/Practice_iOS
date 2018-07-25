@@ -489,6 +489,7 @@
                                             <constraint firstItem="Sz9-Bp-x10" firstAttribute="centerY" secondItem="0js-PF-cGo" secondAttribute="centerY" id="y4G-lF-R2D"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="calendarCircleImageView" destination="0js-PF-cGo" id="T4Q-Ca-q2y"/>
                                             <outlet property="calendarDateLabel" destination="Sz9-Bp-x10" id="Ey9-Hv-eRn"/>
                                             <outlet property="calendarDayLabel" destination="7Yu-8r-dSV" id="SQ1-P3-bag"/>
                                         </connections>

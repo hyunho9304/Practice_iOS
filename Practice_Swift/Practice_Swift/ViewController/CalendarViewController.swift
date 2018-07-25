@@ -97,9 +97,19 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     
     }
     
+
+    
+    //  cell 누르고 있을 때 안의 내용변화
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+
+        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
+        cell.calendarCircleImageView.isHidden = false
+    }
+  
+
     //  cell 선택했을 때
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        
         self.selectYear = self.calendar?.twoWeeksYear![ indexPath.row ]
         self.selectMonth = self.calendar?.twoWeeksMonth![ indexPath.row ]
         self.selectDate = self.calendar?.twoWeeksDate![ indexPath.row ]

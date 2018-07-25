@@ -12,4 +12,5 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var calendarDayLabel: UILabel!
     @IBOutlet weak var calendarDateLabel: UILabel!
+    @IBOutlet weak var calendarCircleImageView: UIImageView!
 }
