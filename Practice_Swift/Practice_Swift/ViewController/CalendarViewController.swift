@@ -53,15 +53,6 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
 //
 //                }
                 
-              
-                self.selectYear = self.calendar?.twoWeeksYear![0]
-                self.selectMonth = self.calendar?.twoWeeksMonth![0]
-                self.selectDate = self.calendar?.twoWeeksDate![0]
-                self.selectDay = self.calendar?.twoWeeksDay![0]
-                
-                self.selectDateTime.text = self.selectYear! + "년 " + self.selectMonth! + "월 " + self.selectDate! + "일 " + self.selectDay!
-                
-                
             } else {
                 
                 let alert = UIAlertController(title: "서버", message: "통신상태를 확인해주세요", preferredStyle: .alert )
@@ -129,20 +120,26 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         self.selectDay = self.calendar?.twoWeeksDay![ indexPath.row ]
         
         self.selectDateTime.text = self.selectYear! + "년 " + self.selectMonth! + "월 " + self.selectDate! + "일 " + self.selectDay!
+        
     }
     
     //  cell 선택 해제 했을 때
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
+
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
         cell.calendarDayLabel.textColor = UIColor( red: 0, green: 0, blue: 0, alpha: 1.0 )
         cell.calendarDateLabel.textColor = UIColor( red: 0 , green: 0 , blue: 0 , alpha: 1.0 )
         cell.calendarCircleImageView.isHidden = true
+
     }
     
     //  cell 간 가로 간격 ( horizental 이라서 가로를 사용해야 한다 )
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
 
