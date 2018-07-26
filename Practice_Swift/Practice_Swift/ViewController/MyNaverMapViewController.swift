@@ -15,10 +15,9 @@ import UIKit
 class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdataOverlayDelegate , NMapLocationManagerDelegate {
     
     //여기 기본
+  
+    @IBOutlet weak var userView: UIView!
     
-    
-    
-
 //  ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 //  ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ지도설정ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     var navermapView : NMapView?    //  네이버지도
@@ -68,6 +67,8 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
         if let button = currentLocationBtn {
             view.addSubview(button)
         }
+        
+        view.addSubview(userView)
 
     }
     
@@ -352,22 +353,23 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
         return CGPoint(x: 0.5, y: 0.0)
     }
     
-    //  마커 선택시 나타나는 뷰 설정
+
+//    //  마커 선택시 나타나는 뷰 설정
     func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, viewForCalloutOverlayItem poiItem: NMapPOIitem!, calloutPosition: UnsafeMutablePointer<CGPoint>!) -> UIView! {
-        
+
         //  뷰 설정
         calloutIndex = String(poiItem.iconIndex)        //  index 설정해서 다음뷰에 넘길때 알려준다
         calloutTitleLabel.text = poiItem.title
         calloutImageView.image = #imageLiteral(resourceName: "uploadImage.png")
-        
+
         calloutPosition.pointee.x = round(calloutView.bounds.size.width / 2) + 1
+
         return calloutView
     }
     
     // 마커 선택??????????????????????
     func onMapOverlay(_ poiDataOverlay: NMapPOIdataOverlay!, didSelectCalloutOfPOIitemAt index: Int32, with object: Any!) -> Bool {
         
-//
 //        let buskingDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BuskingDetailViewController") as? BuskingDetailViewController
 //
 //        buskingDetailVC?.tempText = String(index)

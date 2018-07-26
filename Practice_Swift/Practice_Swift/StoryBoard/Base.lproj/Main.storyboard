@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pvm-n1-VMK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AgM-lZ-wXn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -324,6 +324,13 @@
                     <view key="view" contentMode="scaleToFill" id="ENK-UU-78U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2g-MN-gGK">
+                                <rect key="frame" x="38" y="153" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mGC-NE-PlR"/>
                     </view>
@@ -332,6 +339,7 @@
                         <outlet property="calloutImageView" destination="erv-hj-IlX" id="BkL-sd-EOQ"/>
                         <outlet property="calloutTitleLabel" destination="5O7-8S-RXB" id="gz6-8I-nO5"/>
                         <outlet property="calloutView" destination="wJv-Su-bZs" id="LeP-tt-vfW"/>
+                        <outlet property="userView" destination="K2g-MN-gGK" id="8QA-dN-fUs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBW-ja-uJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -386,7 +394,7 @@
                     <viewLayoutGuide key="safeArea" id="VZp-zX-wJy"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="6297" y="1417"/>
+            <point key="canvasLocation" x="6296.8000000000002" y="1416.3418290854574"/>
         </scene>
         <!--Busking Detail View Controller-->
         <scene sceneID="qC9-cu-cQo">
