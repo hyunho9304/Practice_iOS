@@ -31,9 +31,10 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        //auto selected 1st item
+        let indexPathForFirstRow = IndexPath(row: 0, section: 0)
         
-        dateTimeInit()
-        
+        collectionView(calendarCollectionView, didSelectItemAt: indexPathForFirstRow)
     }
     
     func setting() {
@@ -72,6 +73,11 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
                 self.present(alert , animated: true , completion: nil)
             }
         }
+        
+        self.selectYear = self.calendar?.twoWeeksYear![ 0 ]
+        self.selectMonth = self.calendar?.twoWeeksMonth![ 0 ]
+        self.selectDate = self.calendar?.twoWeeksDate![ 0 ]
+        self.selectDay = self.calendar?.twoWeeksDay![ 0 ]
     }
     
     
@@ -100,6 +106,15 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
             cell.calendarDayLabel.textColor = UIColor( red: 255, green: 0, blue: 0, alpha: 1.0 )
             cell.calendarDateLabel.textColor = UIColor( red: 255 , green: 255 , blue: 255 , alpha: 1.0 )
             cell.calendarCircleImageView.isHidden = false
+            
+            self.selectYear = self.calendar?.twoWeeksYear![ indexPath.row ]
+            self.selectMonth = self.calendar?.twoWeeksMonth![ indexPath.row ]
+            self.selectDate = self.calendar?.twoWeeksDate![ indexPath.row ]
+            self.selectDay = self.calendar?.twoWeeksDay![ indexPath.row ]
+            
+            self.selectDateTime.text = self.selectYear! + "년 " + self.selectMonth! + "월 " + self.selectDate! + "일 " + self.selectDay!
+            
+            self.selectDateTime.isHidden = false
         }
         else {
             
@@ -131,15 +146,6 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
 
         selectedIndex = indexPath
         collectionView.reloadData()
-
-        self.selectYear = self.calendar?.twoWeeksYear![ indexPath.row ]
-        self.selectMonth = self.calendar?.twoWeeksMonth![ indexPath.row ]
-        self.selectDate = self.calendar?.twoWeeksDate![ indexPath.row ]
-        self.selectDay = self.calendar?.twoWeeksDay![ indexPath.row ]
-        
-        self.selectDateTime.text = self.selectYear! + "년 " + self.selectMonth! + "월 " + self.selectDate! + "일 " + self.selectDay!
-        
-        self.selectDateTime.isHidden = false
         
     }
     
