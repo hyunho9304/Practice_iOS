@@ -150,6 +150,7 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         collectionView.reloadData()
         
         print( "선택" )
+        print()
         
     }
     
