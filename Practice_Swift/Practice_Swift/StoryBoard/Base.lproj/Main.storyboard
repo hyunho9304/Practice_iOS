@@ -406,10 +406,10 @@
             </objects>
             <point key="canvasLocation" x="6296.8000000000002" y="1416.3418290854574"/>
         </scene>
-        <!--Busking Detail View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="qC9-cu-cQo">
             <objects>
-                <viewController storyboardIdentifier="BuskingDetailViewController" id="cxX-Qt-Kwg" customClass="BuskingDetailViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="cxX-Qt-Kwg" customClass="SearchViewController" customModule="Practice_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gGy-tD-YOl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

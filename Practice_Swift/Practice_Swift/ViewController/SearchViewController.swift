@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BuskingDetailViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     @IBOutlet weak var buskingIndex: UILabel!
     

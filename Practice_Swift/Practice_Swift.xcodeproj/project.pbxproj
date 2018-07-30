@@ -24,7 +24,7 @@
 		BEDF953320FF322200A9099D /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953220FF322200A9099D /* NMapViewResources.swift */; };
 		BEDF95352100570500A9099D /* MyNaverMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF95342100570500A9099D /* MyNaverMapViewController.swift */; };
 		BEDF95372101E23400A9099D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF95362101E23400A9099D /* HomeViewController.swift */; };
-		BEDF95392101E29400A9099D /* BuskingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF95382101E29400A9099D /* BuskingDetailViewController.swift */; };
+		BEDF95392101E29400A9099D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF95382101E29400A9099D /* SearchViewController.swift */; };
 		BEDF953B2107165400A9099D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953A2107165400A9099D /* CalendarViewController.swift */; };
 		BEDF953E2107192C00A9099D /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953D2107192C00A9099D /* CalendarCollectionViewCell.swift */; };
 		BEDF9540210733D200A9099D /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF953F210733D200A9099D /* APIservice.swift */; };
@@ -67,7 +67,7 @@
 		BEDF953220FF322200A9099D /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 		BEDF95342100570500A9099D /* MyNaverMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNaverMapViewController.swift; sourceTree = "<group>"; };
 		BEDF95362101E23400A9099D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		BEDF95382101E29400A9099D /* BuskingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuskingDetailViewController.swift; sourceTree = "<group>"; };
+		BEDF95382101E29400A9099D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BEDF953A2107165400A9099D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		BEDF953D2107192C00A9099D /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEDF953F210733D200A9099D /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				BEDF953020FF2F3A00A9099D /* NaverMakerViewController.swift */,
 				BEDF95362101E23400A9099D /* HomeViewController.swift */,
 				BEDF95342100570500A9099D /* MyNaverMapViewController.swift */,
-				BEDF95382101E29400A9099D /* BuskingDetailViewController.swift */,
+				BEDF95382101E29400A9099D /* SearchViewController.swift */,
 				BEDF953A2107165400A9099D /* CalendarViewController.swift */,
 			);
 			path = ViewController;
@@ -358,7 +358,7 @@
 				BEDF953B2107165400A9099D /* CalendarViewController.swift in Sources */,
 				BEDF952F20FF255700A9099D /* NaverLocationViewController.swift in Sources */,
 				BEDF953E2107192C00A9099D /* CalendarCollectionViewCell.swift in Sources */,
-				BEDF95392101E29400A9099D /* BuskingDetailViewController.swift in Sources */,
+				BEDF95392101E29400A9099D /* SearchViewController.swift in Sources */,
 				BEDF9542210733F900A9099D /* Calendar.swift in Sources */,
 				BE0821D720FDEFC900AA3FC9 /* NaverMapViewController.swift in Sources */,
 				BEC84A1420F2123C0000399C /* HiddenAlert2ViewController.swift in Sources */,

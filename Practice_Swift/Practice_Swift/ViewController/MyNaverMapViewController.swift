@@ -68,10 +68,23 @@ class MyNaverMapViewController: UIViewController , NMapViewDelegate , NMapPOIdat
             view.addSubview(button)
         }
         
-        view.addSubview(searchBtn)
-        
-        
+        setting()
 
+    }
+    
+    func setting() {
+        
+        view.addSubview(searchBtn)
+        searchBtn.addTarget(self, action: #selector(self.pressedSearchBtn(_:)), for: UIControlEvents.touchUpInside)
+    }
+    
+    @objc func pressedSearchBtn( _ sender : UIButton ) {
+        
+        guard let searchVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController else { return }
+        
+        searchVC.tempText = "검색검색"
+        
+        self.present( searchVC , animated: false , completion: nil )
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
