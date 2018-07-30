@@ -149,9 +149,6 @@ class CalendarViewController: UIViewController , UICollectionViewDelegate , UICo
         selectedIndex = indexPath
         collectionView.reloadData()
         
-        print( "선택" )
-        print()
-        
     }
     
     //  cell 간 가로 간격 ( horizental 이라서 가로를 사용해야 한다 )

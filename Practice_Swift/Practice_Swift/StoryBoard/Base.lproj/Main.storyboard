@@ -325,27 +325,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2g-MN-gGK">
-                                <rect key="frame" x="38" y="153" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOH-24-xVm">
-                                        <rect key="frame" x="124" y="64" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUp-AM-rmK">
-                                        <rect key="frame" x="120" y="8" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIv-fS-nJR">
+                                <rect key="frame" x="64" y="43" width="247" height="36"/>
+                                <color key="backgroundColor" red="0.67450980390000004" green="0.53725490200000003" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WIv-fS-nJR" secondAttribute="height" multiplier="247:36" id="SOf-8G-e31"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="0.72156862749999995" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WIv-fS-nJR" firstAttribute="centerX" secondItem="mGC-NE-PlR" secondAttribute="centerX" id="Y5s-Zc-FoR"/>
+                            <constraint firstItem="WIv-fS-nJR" firstAttribute="width" secondItem="ENK-UU-78U" secondAttribute="width" multiplier="247:375" id="g4D-gk-2B4"/>
+                            <constraint firstItem="WIv-fS-nJR" firstAttribute="top" secondItem="mGC-NE-PlR" secondAttribute="top" constant="23" id="uya-4S-Cdg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mGC-NE-PlR"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="d9a-yk-Mcv"/>
@@ -353,7 +349,7 @@
                         <outlet property="calloutImageView" destination="erv-hj-IlX" id="BkL-sd-EOQ"/>
                         <outlet property="calloutTitleLabel" destination="5O7-8S-RXB" id="gz6-8I-nO5"/>
                         <outlet property="calloutView" destination="wJv-Su-bZs" id="LeP-tt-vfW"/>
-                        <outlet property="userView" destination="K2g-MN-gGK" id="8QA-dN-fUs"/>
+                        <outlet property="searchBtn" destination="WIv-fS-nJR" id="aiq-nB-4Nl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBW-ja-uJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -418,7 +414,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJC-qL-qos">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="디테일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJC-qL-qos">
                                 <rect key="frame" x="136" y="147" width="102" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
